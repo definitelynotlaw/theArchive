@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -31,8 +31,34 @@
     <details>
         <summary><strong>🧠 [Topic]</strong></summary>
         <ul>
-        <li>Breakdown or Supporting info</li>
-        <li>Breakdown or Supporting info</li>   
+        <li>    
+        <p><span class="trigger" data-modal="modal1">[Topic1]</span></p>
+        <!-- Modal Content -->
+        <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="assets/images/Law.png" alt="Law image" class="modal-image">
+            <p>Describe the topic here; bonus if with visuals.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Quaerat quae nihil aperiam fugit quis fugiat sit illum ea?
+                Accusantium, rem?</p>
+        </div>
+        </div>
+        </li>
+
+        <li>
+        <p><span class="trigger" data-modal="modal2">[Topic2]</span></p>
+        <!-- Modal Content -->
+        <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="assets/images/icon.png" alt="icon image" class="modal-image">
+            <p>Describe the topic here; bonus if with visuals.</p>
+            <img src="assets/images/Law.png" alt="Law image" class="modal-image">
+        </div>
+        </div>
+        </li>   
+        
         <li>Breakdown or Supporting info</li>
         <li>Breakdown or Supporting info</li>
         </ul>
@@ -124,6 +150,25 @@
 </footer>
 
 <script>
+
+    document.querySelectorAll('.trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+        const modalId = trigger.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'block';
+    });
+    });
+
+    document.querySelectorAll('.close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
+        closeBtn.closest('.modal').style.display = 'none';
+    });
+    });
+
+    window.addEventListener('click', event => {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
+    });
     const html = document.documentElement;
 
     // Set initial theme based on localStorage or default to light
@@ -138,6 +183,14 @@
     }
 
     document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+
+    // Modal functionality
+    const myModal = document.getElementById('myModal')
+    const myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus()
+    })
 </script>
 </body>
 </html>
