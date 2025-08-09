@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" href="assets/images/icon.png">
+    <link rel="stylesheet" href="style.css" />
+    <title>The Archive</title>
+</head>
+<body>
+<button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+
+<nav class="navbar">
+<div class="branding">
+    <a href="index.html" class="branding-link">
+    <img src="assets/images/Law.png" alt="definitelynotlaw icon" class="icon" />
+    <div class="text-group">
+        <h1 class="title">The Archive</h1>
+        <p class="subtitle">Your quick reference for [Subject]</p>
+    </div>
+    </a>
+</div>
+</nav>
+
+<main>
+
+<h2 style="text-align: center;"><strong>[Subject]</strong></h2>
+
+    <section>
+    <h2>📚 Week 1: [Title]</h2>
+    <details>
+        <summary><strong>🧠 [Topic]</strong></summary>
+        <ul>
+        <li>Breakdown or Supporting info</li>
+        <li>Breakdown or Supporting info</li>   
+        <li>Breakdown or Supporting info</li>
+        <li>Breakdown or Supporting info</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary><strong>🧠 [Topic]</strong></summary>
+        <ul>
+        <li>Breakdown or Supporting info</li>
+        <li>Breakdown or Supporting info</li>   
+        <li>Breakdown or Supporting info</li>
+        <li>Breakdown or Supporting info</li>
+        </ul>
+    </details>
+        <p class="card-description" style="text-align: justify;">
+        <strong>During this week, the student needs to: </strong></p>
+        <ol>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nobis pariatur.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, perspiciatis.</li>
+        </ol>
+    </section>
+
+    <section>
+    <h2>📚 Week 2: [Title]</h2>
+    <details>
+        <summary><strong>🧠 [Topic]</strong></summary>
+        <ul>
+        <li>Breakdown or Supporting info</li>
+        <li>Breakdown or Supporting info</li>   
+        <li>Breakdown or Supporting info</li>
+        <li>Breakdown or Supporting info</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary><strong>🧠 [Topic]</strong></summary>
+        <ul>
+        <li>Breakdown or Supporting info</li>
+        <li>Breakdown or Supporting info</li>   
+        <li>Breakdown or Supporting info</li>
+        <li>Breakdown or Supporting info</li>
+        </ul>
+    </details>
+        <p class="card-description" style="text-align: justify;">
+        <strong>During this week, the student needs to: </strong></p>
+        <ol>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nobis pariatur.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, perspiciatis.</li>
+        </ol>
+    </section>
+
+    <section>
+    <h2>📚 Week 3: [Title]</h2>
+    <details>
+        <summary><strong>🧠 [Topic]</strong></summary>
+        <ul>
+        <li>Breakdown or Supporting info</li>
+        <li>Breakdown or Supporting info</li>   
+        <li>Breakdown or Supporting info</li>
+        <li>Breakdown or Supporting info</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary><strong>🧠 [Topic]</strong></summary>
+        <ul>
+        <li>Breakdown or Supporting info</li>
+        <li>Breakdown or Supporting info</li>   
+        <li>Breakdown or Supporting info</li>
+        <li>Breakdown or Supporting info</li>
+        </ul>
+    </details>
+        <p class="card-description" style="text-align: justify;">
+        <strong>During this week, the student needs to: </strong></p>
+        <ol>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nobis pariatur.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, perspiciatis.</li>
+        </ol>
+    </section>
+
+
+</main>
+
+<footer>
+    <p>© 2025 Law's Dev Toolbox</p>
+</footer>
+
+<script>
+    const html = document.documentElement;
+
+    // Set initial theme based on localStorage or default to light
+    const savedTheme = localStorage.getItem("theme") || "light";
+    html.dataset.theme = savedTheme;
+
+
+    function toggleTheme() {
+    const newTheme = html.dataset.theme === "light" ? "dark" : "light";
+    html.dataset.theme = newTheme;
+    localStorage.setItem("theme", newTheme);
+    }
+
+    document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+</script>
+</body>
+</html>

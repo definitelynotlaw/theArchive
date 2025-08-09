@@ -1,0 +1,298 @@
+/* =========================
+    CSS VARIABLES & THEMES
+   ========================= */
+
+/* Root color palette */
+:root {
+--color-primary: #182825;
+--color-secondary: #AFA98D;
+--color-accent1: #D97C3C;
+--color-accent2: #8AB6D6;
+--color-light: #F9F6F0;
+--color-dark: #0F1915;
+--color-text-light: #2e2e2e;
+--color-text-dark: #e0e0e0;
+
+/* Default background/text (can be overridden by theme) */
+--bg-color: #ffffff;
+--text-color: #111111;
+}
+
+/* Light theme overrides */
+[data-theme="light"] {
+--bg-color: var(--color-light);
+--text-color: var(--color-text-light);
+--card-bg: #ffffff;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+--bg-color: #1a1a1a;
+--text-color: var(--color-text-dark);
+--card-bg: #1f1f1f;
+}
+
+/* =========================
+    GLOBAL ELEMENT STYLES
+   ========================= */
+
+body {
+font-family: 'Segoe UI', sans-serif;
+background-color: var(--bg-color);
+color: var(--text-color);
+margin: 0;
+padding: 2rem;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Headings */
+h1 {
+font-size: 2rem;
+margin: 0.5rem 0;
+}
+
+h2 {
+font-size: 1.5rem;
+color: var(--color-accent1);
+border-bottom: 2px solid var(--color-accent2);
+padding-bottom: 0.25rem;
+}
+
+/* Main content area */
+main {
+max-width: 960px;
+margin: auto;
+flex: 1;
+padding: 1.5rem;
+}
+
+/* Sections (cards/containers) */
+section {
+background-color: var(--card-bg);
+border-left: 6px solid var(--color-secondary);
+padding: 1.25rem;
+margin: 2rem 0;
+border-radius: 10px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+/* =========================
+    HEADER, NAVBAR, FOOTER
+   ========================= */
+
+header, footer, nav {
+background-color: var(--color-primary);
+color: var(--color-secondary);
+padding: 1rem;
+text-align: center;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Navbar styles */
+.navbar {
+display: flex;
+justify-content: center; 
+align-items: center;
+padding: 1rem 2rem;
+color: #f0d972; 
+font-family: 'Segoe UI', sans-serif;
+flex-wrap: wrap;
+backdrop-filter: blur(30px);
+box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+border: 2px solid rgba(255, 255, 255, 0.18);
+position: relative;
+}
+
+/* Branding group inside navbar */
+.branding,
+.branding-link {
+display: flex;
+align-items: center;
+gap: 1rem;
+text-decoration: none;
+color: inherit;
+}
+
+/* Navbar links */
+.navbar a {
+text-decoration: none;
+color: inherit;
+gap: 1rem;
+display: flex;
+}
+
+/* =========================
+    THEME TOGGLE BUTTONS
+   ========================= */
+
+/* Floating theme toggle button (top right) */
+#theme-toggle {
+position: fixed;
+top: 1.5rem;
+right: 1.5rem;
+z-index: 1000;
+background: var(--color-primary);
+color: var(--color-accent1);
+border: none;
+border-radius: 50%;
+width: 48px;
+height: 48px;
+font-size: 1.5rem;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+cursor: pointer;
+transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+#theme-toggle:hover {
+background: var(--color-accent1);
+color: var(--color-primary);
+box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+}
+
+/* Inline theme toggle (navbar) */
+.theme-toggle {
+background-color: transparent;
+border: 2px solid #f0d972;
+color: #f0d972;
+padding: 0.5rem 1rem;
+border-radius: 8px;
+cursor: pointer;
+font-weight: bold;
+transition: background-color 0.3s ease;
+position: absolute;
+right: 2rem;
+}
+
+.theme-toggle:hover {
+background-color: #2d3f41;
+}
+
+/* =========================
+    CARD COMPONENTS
+   ========================= */
+
+.card {
+display: flex;
+align-items: center;
+gap: 1.5rem;
+padding: 1.5rem;
+border-radius: 8px;
+background-color: var(--card-bg);
+flex-wrap: wrap; /* Responsive */
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-image {
+justify-content: center;
+flex-shrink: 0;
+max-width: 250px;
+width: 100%;
+height: auto;
+border-radius: 8px;
+object-fit: cover;
+margin: 10px;
+}
+
+.card-content {
+flex: 1;
+min-width: 250px;
+}
+
+/* =========================
+    TYPOGRAPHY & LISTS
+   ========================= */
+
+.title {
+color: var(--color-accent1); 
+}
+
+.text-group .title {
+font-size: 1.4rem;
+margin: 0;
+font-weight: bold;
+}
+
+.text-group .subtitle {
+font-size: 0.9rem;
+margin: 0;
+color: #cccccc; 
+}
+
+/* Custom bullet list */
+ul {
+list-style: none;
+padding-left: 0;
+}
+
+ul li {
+position: relative;
+padding-left: 1.5em;
+margin-bottom: 0.6em;
+}
+
+ul li::before {
+content: '▹';
+position: absolute;
+left: 0;
+color: var(--color-accent2);
+}
+
+/* Inline code styling */
+code {
+background-color: rgba(24, 40, 37, 0.08);
+padding: 3px 8px;
+border-radius: 5px;
+font-family: 'Courier New', monospace;
+}
+
+/* =========================
+    ICONS
+   ========================= */
+
+.icon {
+width: 55px;
+height: 55px;
+border-radius: 50%;
+}
+
+/* =========================
+    MEDIA QUERIES (RESPONSIVE)
+   ========================= */
+
+/* Hide toggle button when printing */
+@media print {
+.toggle-btn {
+    display: none;
+    }
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 900px) {
+body {
+    padding: 1rem;
+    }
+
+header h1 {
+    font-size: 1.4rem;
+    }
+
+h2 {
+    font-size: 1.2rem;
+    }
+
+.navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    }
+
+.theme-toggle {
+    position: static;
+    align-self: flex-end;
+    margin-top: 1rem;
+    }
+}

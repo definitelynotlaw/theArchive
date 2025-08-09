@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" href="assets/images/icon.png">
+    <link rel="stylesheet" href="style.css" />
+    <title>The Archive</title>
+</head>
+<body>
+<button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+
+<nav class="navbar">
+<div class="branding">
+    <a href="index.html" class="branding-link">
+    <img src="assets/images/Law.png" alt="definitelynotlaw icon" class="icon" />
+    <div class="text-group">
+        <h1 class="title">The Archive</h1>
+        <p class="subtitle">Your quick reference for BSCS Subjects</p>
+    </div>
+    </a>
+</div>
+</nav>
+
+<main>
+    <p style="text-align: justify;">
+    I decided to build this so my <strong>sleep-deprived</strong> self could drift through the <strong>chaos</strong> 
+    like a castaway on a <strong>raft</strong>—half-awake, half-determined, but still <strong>afloat</strong>.</p>
+    <section class="card-grid">
+        <div class="card">        
+        <div class="card-content" style="text-align: center;">
+            <h2 style="text-align: center;">BSCS First Year</h2>
+            <p class="card-description">
+            <a href="mmw.html"><img src="assets/images/MMW.png" alt="MMW image" class="card-image" /></a>
+            <a href="fop.html"><img src="assets/images/FOP.png" alt="FOP image" class="card-image" /></a>
+            <a href="imd.html"><img src="assets/images/IMDPROG.png" alt="IMDPROG image" class="card-image" /></a>
+            <a href="web.html"><img src="assets/images/WEBTECH.png" alt="WEBTECH image" class="card-image" /></a>
+            <a href="net.html"><img src="assets/images/NETCOM.png" alt="NETCOM image" class="card-image" /></a>
+            <a href="pur.html"><img src="assets/images/PURCOM.png" alt="PURCOM image" class="card-image" /></a>
+        </div>
+    </section>
+    <section class="card-grid">
+        <div class="card">        
+        <div class="card-content" style="text-align: center;">
+            <h2 style="text-align: center;">BSCS Second Year</h2>
+            <p class="card-description">
+            <a href="data.html"><img src="assets/images/dataStructuresAndAlgorithms.png" alt="Data Structures and Algorithms image" class="card-image" /></a>
+            <a href="discrete.html"><img src="assets/images/discreteStructures.png" alt="Discrete Structures 1 image" class="card-image" /></a>
+            <a href="info.html"><img src="assets/images/informationManagement.png" alt="Information Management image" class="card-image" /></a>
+            <a href="art.html"><img src="assets/images/artAppreciation.png" alt="Art Appreciation image" class="card-image" /></a>
+            <a href="rizal.html"><img src="assets/images/lifeWorksRizal.png" alt="The Life and Works of Rizal image" class="card-image" /></a>
+            <a href="science.html"><img src="assets/images/scienceTechnologySociety.png" alt="Science, Technology, and Society image" class="card-image" /></a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Law's Projects</p>
+</footer>
+
+<script>
+    const html = document.documentElement;
+
+    // Set initial theme on load (defaults to light if not set)
+    const savedTheme = localStorage.getItem("theme") || "light";
+    html.dataset.theme = savedTheme;
+
+    // Toggle theme and save preference
+    function toggleTheme() {
+    const newTheme = html.dataset.theme === "light" ? "dark" : "light";
+    html.dataset.theme = newTheme;
+    localStorage.setItem("theme", newTheme);
+    }
+
+    document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+</script>
+</body>
+</html>

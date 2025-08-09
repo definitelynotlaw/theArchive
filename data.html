@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" href="assets/images/icon.png">
+    <link rel="stylesheet" href="style.css" />
+    <title>The Archive</title>
+</head>
+<body>
+<button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+
+<nav class="navbar">
+<div class="branding">
+    <a href="index.html" class="branding-link">
+    <img src="assets/images/Law.png" alt="definitelynotlaw icon" class="icon" />
+    <div class="text-group">
+        <h1 class="title">The Archive</h1>
+        <p class="subtitle">Your quick reference for Data Structures and Algorithms 1</p>
+    </div>
+    </a>
+</div>
+</nav>
+
+<main>
+
+
+    <h2 style="text-align: center;"><strong>Data Structures and Algorithms</strong></h2>
+    <section>
+    <h2>📚 Week 1: C++ PROGRAMMING LANGUAGE</h2>
+
+    <details>
+        <summary><strong>🧠 Basic Input / Output Statements</strong></summary>
+        <ul>
+        <li>info</li>
+        <li>info</li>
+        <li>info</li>
+        <li>info</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary><strong>🧠 Control Structure</strong></summary>
+        <ul>
+        <li>Iteration Structure</li>
+        <li>Jump Statements</li>        
+        <li>Function Statement</li>
+        <li>Conditional / Selection Structure</li>
+        </ul>
+    </details>
+    </section>
+
+    <section class="card-grid">
+        <div class="card">        
+        <div class="card-content" style="text-align: center;">
+            <h2 style="text-align: left;">(Topic Name):</h2>
+            <p class="card-description">
+            <p style="text-align: justify;">
+            A year in <strong>code</strong>, <strong>concept</strong>, and <strong>context</strong>—this isn’t a <em>shortcut</em>, it’s a <strong>narrative</strong>.
+            First-year <strong>BSCS</strong> distilled into <strong>lessons</strong>, <em>reflections</em>, and <strong>foundations</strong> that shaped the start of something <em>bigger</em>.
+            </p>
+
+            <p class="card-description" style="text-align: justify;">
+            Each <strong>module</strong> here is more than just a <strong>subject</strong>—it’s a <em>snapshot</em> of your first-year journey in <strong>BSCS</strong>.
+            From <strong>decoding logic</strong> to understanding the <strong>rhythm</strong> behind algorithms, these cards map out the <em>building blocks</em> that shaped your <strong>foundation</strong>.
+            Dive in to <strong>revisit</strong> core ideas, <strong>reinforce</strong> key patterns, and <em>reflect</em> on the <strong>progress</strong> you've made.
+            It's not just <em>revision</em>—it’s <strong>recognition</strong> of <em>growth</em>.
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 Law's Dev Toolbox</p>
+</footer>
+
+<script>
+    const html = document.documentElement;
+
+    // Set initial theme based on localStorage or default to light
+    const savedTheme = localStorage.getItem("theme") || "light";
+    html.dataset.theme = savedTheme;
+
+
+    function toggleTheme() {
+    const newTheme = html.dataset.theme === "light" ? "dark" : "light";
+    html.dataset.theme = newTheme;
+    localStorage.setItem("theme", newTheme);
+    }
+
+    document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+</script>
+</body>
+</html>
