@@ -32,12 +32,15 @@
         <summary><strong>🧠 [Topic]</strong></summary>
         <ul>
         <li>    
-        <p><span class="trigger" data-modal="modal1">[Topic1]</span></p>
+        <p><span class="trigger" data-modal="modal1">Uploaded Video with Supporting Details</span></p>
         <!-- Modal Content -->
         <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img src="assets/images/Law.png" alt="Law image" class="modal-image">
+            <video width="640" height="360" class="responsive-video" controls>
+            <source src="assets/videos/4kClutch _12mb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
             <p>Describe the topic here; bonus if with visuals.</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                 Quaerat quae nihil aperiam fugit quis fugiat sit illum ea?
@@ -45,11 +48,31 @@
         </div>
         </div>
         </li>
+        <li>Breakdown or Supporting info</li>
 
         <li>
-        <p><span class="trigger" data-modal="modal2">[Topic2]</span></p>
+        <p><span class="trigger" data-modal="modal2">Embedded Video with Supporting Details</span></p>
         <!-- Modal Content -->
         <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="video-container">
+            <iframe width="1905" height="782" src="https://www.youtube.com/embed/Y7gHD7pCa00?list=RDY7gHD7pCa00" 
+            title="Love Is (Live at The Cozy Cove) - The Ridleys" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+            </div>
+            <p>Describe the topic here; bonus if with visuals.</p>
+        </div>
+        </div>
+        </li>   
+        <li>Breakdown or Supporting info</li>
+
+        <li>
+        <p><span class="trigger" data-modal="modal3">Uploaded Images with details in between</span></p>
+        <!-- Modal Content -->
+        <div id="modal3" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <img src="assets/images/icon.png" alt="icon image" class="modal-image">
@@ -58,8 +81,6 @@
         </div>
         </div>
         </li>   
-        
-        <li>Breakdown or Supporting info</li>
         <li>Breakdown or Supporting info</li>
         </ul>
     </details>
